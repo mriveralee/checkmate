@@ -12,6 +12,7 @@
     "underscore": "*",
     "hbs": "*",
     "mongoose": "*",
-    "connect-mongo": "*"
+    "connect-mongo": "*",
+    "async": "~0.2.9"
   }
 }
