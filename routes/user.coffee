@@ -38,9 +38,11 @@ exports.login_get = (req, res) ->
   res.render "login"
 
 exports.get_menu = (req, res) =>
+  # TODO: correct conditioning on email
   User.findOne req.params.email, (err, restaurant) ->
     res.send restaurant.menu
 
 exports.get_user = (req, res) =>
+  # TODO: correct conditioning on email
   User.findOne req.params.email, (err, restaurant) ->
     res.send restaurant
