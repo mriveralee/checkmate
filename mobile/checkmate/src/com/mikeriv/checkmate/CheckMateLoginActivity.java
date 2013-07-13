@@ -9,29 +9,35 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Base64;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.mikeriv.checkmate.util.JSONUtils;
+import com.mikeriv.checkmate.util.RestaurantKeys;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Activity which displays a login screen to the user, offering registration as
  * well.
  */
 public class CheckMateLoginActivity extends Activity {
-
-  public static final String RESTAURANT_VENMO_USER_ID_KEY = "RESTAURANT_VENMO_USER_ID";
-  public static final String RESTAURANT_NAME_KEY = "RESTAURANT_NAME";
-  public static final String RESTAURANT_MENU_KEY = "RESTAURANT_MENU";
-  public static final String RESTAURANT_EMAIL_KEY = "RESTAURANT_EMAIL";
-  public static final String RESAURANT_PHONE_KEY = "RESTAURANT_PHONE";
   private static final String APP_AUTHENTICATION_URL = "http://10.0.2.2:3000/login";
 
   private static final String TAG = CheckMateLoginActivity.class.getName();
@@ -58,6 +64,9 @@ public class CheckMateLoginActivity extends Activity {
   // Values for email and password at the time of the login attempt.
   private String mEmail;
   private String mPassword;
+
+  //JSON Results
+  private JSONObject mJSONResults;
 
   // UI references.
   private EditText mEmailView;
@@ -223,40 +232,54 @@ public class CheckMateLoginActivity extends Activity {
       if (mEmail == null || mPassword == null) {
         return false;
       }
-      String response;
-      int responseCode = -1;
-      HttpURLConnection connection;
+      HttpClient httpclient = new DefaultHttpClient();
+      HttpPost httppost = new HttpPost(APP_AUTHENTICATION_URL);
+      String responseMessage = null;
+      String charset = "UTF-8";
+// Request parameters and other properties.
+      List<NameValuePair> param = new ArrayList<NameValuePair>(2);
+      param.add(new BasicNameValuePair("email", mEmail));
+      param.add(new BasicNameValuePair("password", mPassword));
       try {
-        connection = (HttpURLConnection) new URL(APP_AUTHENTICATION_URL).openConnection();
-        String userPasswordCombination = mEmail + ":" + mPassword;
-        String basicAuth =
-                "Basic " + new String(Base64.encode(userPasswordCombination.getBytes(), Base64.NO_WRAP));
-        basicAuth = "Basic " + new String(userPasswordCombination);
+        httppost.setEntity(new UrlEncodedFormEntity(param, charset));
 
-        connection.setRequestProperty("Authorization", basicAuth);
-        connection.setUseCaches(false);
-        connection.connect();
+        //Execute and get the response.
+        HttpResponse response = httpclient.execute(httppost);
+        HttpEntity entity = response.getEntity();
 
-        while (responseCode == -1) {
-         // wait
-          responseCode = connection.getResponseCode();
-          response = connection.getResponseMessage();
+        if (entity != null) {
+          // A Simple JSON Response Read
+          InputStream instream = entity.getContent();
+          String result = JSONUtils.convertStreamToString(instream);
 
+          // A Simple JSONObject Creation
+          JSONObject json = new JSONObject(result);
+          mJSONResults = json;
+          // A Simple JSONObject Parsing
+          JSONArray nameArray = json.names();
+          JSONArray valArray = json.toJSONArray(nameArray);
+
+          if (nameArray.get(0) == "err" || nameArray.length() < 4) {
+            return false;
+          }
+          // Closing the input stream will trigger connection release
+          instream.close();
+
+          return true;
         }
 
-      } catch (Exception exception) {
-        Log.e(TAG, exception.toString());
+
+      } catch (Exception e1) {
+        e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
       }
 
-
-
-      for (String credential : DUMMY_CREDENTIALS) {
-        String[] pieces = credential.split(":");
-        if (pieces[0].equals(mEmail)) {
-          // Account exists, return true if the password matches.
-          return pieces[1].equals(mPassword);
-        }
-      }
+//      for (String credential : DUMMY_CREDENTIALS) {
+//        String[] pieces = credential.split(":");
+//        if (pieces[0].equals(mEmail)) {
+//          // Account exists, return true if the password matches.
+//          return pieces[1].equals(mPassword);
+//        }
+//      }
 
       // TODO: register the new account here.
       return false;
@@ -268,13 +291,54 @@ public class CheckMateLoginActivity extends Activity {
       showProgress(false);
 
       if (success) {
+        JSONArray keys = mJSONResults.names();
+        JSONArray values = null;
+        try {
+          values = mJSONResults.toJSONArray(keys);
+        } catch (JSONException e) {
+          e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        if (values == null) {
+          return;
+        }
+
+
+        String email = "",
+                venmo = "",
+                name = "",
+                address = "",
+                zip = "",
+                phone = "",
+                city = "",
+                state = "";
+        JSONObject menu = new JSONObject();
+        try {
+          email = mJSONResults.getString(RestaurantKeys.EMAIL);
+          menu = mJSONResults.getJSONObject(RestaurantKeys.MENU);
+          venmo =  mJSONResults.getString(RestaurantKeys.VENMO_USER_ID);
+          name =  mJSONResults.getString(RestaurantKeys.NAME);
+          phone =  mJSONResults.getString(RestaurantKeys.PHONE);
+          address =  mJSONResults.getString(RestaurantKeys.ADDRESS);
+          city =  mJSONResults.getString(RestaurantKeys.CITY);
+          state =  mJSONResults.getString(RestaurantKeys.STATE);
+          zip =  mJSONResults.getString(RestaurantKeys.ZIP);
+        } catch (JSONException e) {
+          e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+
+
         //Start new activity and pass the venmo user name
         Intent mainIntent = new Intent(CheckMateLoginActivity.this, CheckMateMainActivity.class);
-        mainIntent.putExtra(RESTAURANT_VENMO_USER_ID_KEY, "venmo");
-        mainIntent.putExtra(RESTAURANT_NAME_KEY, "name");
-        mainIntent.putExtra(RESTAURANT_EMAIL_KEY, "email");
-        mainIntent.putExtra(RESTAURANT_MENU_KEY, "menu");
-        mainIntent.putExtra(RESAURANT_PHONE_KEY, "phone");
+        mainIntent.putExtra(RestaurantKeys.VENMO_USER_ID, venmo);
+        mainIntent.putExtra(RestaurantKeys.NAME, name);
+        mainIntent.putExtra(RestaurantKeys.EMAIL, email);
+        mainIntent.putExtra(RestaurantKeys.MENU, menu.toString());
+        mainIntent.putExtra(RestaurantKeys.PHONE, phone);
+        mainIntent.putExtra(RestaurantKeys.ADDRESS, address);
+        mainIntent.putExtra(RestaurantKeys.CITY, city);
+        mainIntent.putExtra(RestaurantKeys.STATE, state);
+        mainIntent.putExtra(RestaurantKeys.ZIP, zip);
         CheckMateLoginActivity.this.startActivity(mainIntent);
         finish();
       } else {
