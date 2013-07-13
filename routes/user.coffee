@@ -38,9 +38,9 @@ exports.login_get = (req, res) ->
   res.render "login"
 
 exports.get_menu = (req, res) =>
-  User.findOne req.params.id, (err, restaurant) ->
+  User.findOne req.params.email, (err, restaurant) ->
     res.send restaurant.menu
 
-exports.get_restaurant = (req, res) =>
-  User.findOne req.params.id, (err, restaurant) ->
+exports.get_user = (req, res) =>
+  User.findOne req.params.email, (err, restaurant) ->
     res.send restaurant

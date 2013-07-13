@@ -2,6 +2,7 @@ util = require 'util'
 User = require "./models/user"
 
 default_user =
+  email: 'kevin@google.com'
   address_1: '120 2nd Street' 
   city: 'Mountain View' 
   state: 'CA'
