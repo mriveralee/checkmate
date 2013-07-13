@@ -57,14 +57,16 @@ db.once 'open', ->
 
 
 app.get "/", home.index
+app.get "/success", home.index
 app.get "/users", user.list
 app.get "/users.json", user.json_all
 app.get "/register", user.register_get
 app.post "/register", user.register_post
 app.get "/login", user.login_get
 app.post "/login", user.login_post
-app.get "/menu/:email", user.get_menu
-app.get "/restaurant/:email", user.get_user
+#app.get "/menu/:email", user.get_menu
+#app.get "/restaurant/:email", user.get_user
+app.get "/user", user.get_user
 
 filldata.run()
 

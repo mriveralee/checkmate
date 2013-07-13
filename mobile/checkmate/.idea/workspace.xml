@@ -14,9 +14,7 @@
   <component name="AndroidDesignerProfile">
     <option name="fullProfile">
       <profile>
-        <option name="device" value="2.7in QVGA" />
-        <option name="deviceConfiguration" value="Portrait" />
-        <option name="targetHashString" value="android-17" />
+        <option name="device" value="[None]" />
         <option name="theme" value="Theme" />
       </profile>
     </option>
@@ -63,6 +61,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -99,6 +98,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+<<<<<<< HEAD
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java" line="235" class="com.mikeriv.checkmate.CheckMateLoginActivity.UserLoginTask" package="com.mikeriv.checkmate">
@@ -177,6 +177,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+=======
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -209,7 +211,11 @@
           <file leaf-file-name="CheckMateLoginActivity.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state line="251" column="0" selection-start="8521" selection-end="8521" vertical-scroll-proportion="0.73138297">
+=======
+                <state line="185" column="29" selection-start="5821" selection-end="5821" vertical-scroll-proportion="0.4830918">
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#2727#3138#0" expanded="true" />
@@ -232,20 +238,24 @@
           </file>
           <file leaf-file-name="activity_login.xml" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
+              <provider editor-type-id="android-designer">
+                <state />
+              </provider>
               <provider selected="true" editor-type-id="text-editor">
                 <state line="44" column="50" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
-              </provider>
-              <provider editor-type-id="android-designer">
-                <state />
               </provider>
             </entry>
           </file>
           <file leaf-file-name="MenuListView.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/views/MenuListView.java">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state line="62" column="31" selection-start="1697" selection-end="1697" vertical-scroll-proportion="0.0">
+=======
+                <state line="62" column="59" selection-start="1697" selection-end="1697" vertical-scroll-proportion="0.0">
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
                   <folding />
                 </state>
               </provider>
@@ -254,7 +264,11 @@
           <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state line="7" column="12" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+=======
+                <state line="7" column="23" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
                   <folding />
                 </state>
               </provider>
@@ -276,7 +290,11 @@
           <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state line="9" column="56" selection-start="432" selection-end="432" vertical-scroll-proportion="0.3739612">
+=======
+                <state line="9" column="56" selection-start="432" selection-end="432" vertical-scroll-proportion="0.20962733">
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
                   <folding />
                 </state>
               </provider>
@@ -305,9 +323,14 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="2" />
     <option name="y" value="25" />
     <option name="width" value="1435" />
+=======
+    <option name="y" value="36" />
+    <option name="width" value="1125" />
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
     <option name="height" value="830" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -729,8 +752,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="2" y="25" width="1435" height="830" extended-state="0" />
     <editor active="false" />
+=======
+    <frame x="0" y="36" width="1125" height="830" extended-state="0" />
+    <editor active="true" />
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -740,18 +768,23 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06335493" sideWeight="0.6014084" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.081557" sideWeight="0.67042255" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969433" sideWeight="0.67042255" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -821,6 +854,40 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/res/values/strings_activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="29" selection-start="305" selection-end="316" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="50" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
     <entry file="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/views/MenuListView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="0" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
@@ -843,23 +910,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/activity_login.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="50" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateMainActivity.java">
@@ -878,13 +945,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="7" column="12" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+=======
+        <state line="7" column="23" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/views/MenuListView.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="62" column="31" selection-start="1697" selection-end="1697" vertical-scroll-proportion="0.0">
           <folding />
         </state>
@@ -905,10 +977,14 @@
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="56" selection-start="432" selection-end="432" vertical-scroll-proportion="0.3739612">
+=======
+        <state line="62" column="59" selection-start="1697" selection-end="1697" vertical-scroll-proportion="0.0">
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="79" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
@@ -929,13 +1005,22 @@
     <entry file="file://$USER_HOME$/android-sdks/sources/android-17/java/net/URLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="386" column="19" selection-start="13593" selection-end="13593" vertical-scroll-proportion="1.0505319">
+=======
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="56" selection-start="432" selection-end="432" vertical-scroll-proportion="0.20962733">
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="251" column="0" selection-start="8521" selection-end="8521" vertical-scroll-proportion="0.73138297">
+=======
+        <state line="185" column="29" selection-start="5821" selection-end="5821" vertical-scroll-proportion="0.4830918">
+>>>>>>> 5395c5755b239d54a13ccaff6bd1d2d32e2fb508
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2727#3138#0" expanded="true" />
