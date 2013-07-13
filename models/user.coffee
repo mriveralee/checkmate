@@ -6,12 +6,13 @@ User = new Schema
   email:
     type: String
     index: {unique: true}
+  venmo_id: String
   hashed_password: String
   salt: String
   address_1: String
-  address_2: String
   city: String
   state: String
+  zip_code: String
   phone: String
   menu: Schema.Types.Mixed
 

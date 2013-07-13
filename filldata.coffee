@@ -4,10 +4,12 @@ async = require 'async'
 
 default_user =
   email: 'test@test.com'
+  venmo_id: 'kevinshen'
   password: 'test'
-  address_1: '120 2nd Street' 
+  address: '120 2nd Street' 
   city: 'Mountain View' 
   state: 'CA'
+  zip_code: '94121'
   phone: '415-555-9815'
   menu: 
     'Boont Amber Ale': 5
