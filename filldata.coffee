@@ -12,13 +12,13 @@ default_user =
   zip_code: '94121'
   phone: '415-555-9815'
   menu: 
-    'Boont Amber Ale': 5
-    'Long Cooked Pork Shoulder': 25
-    'Rack of Lamb': 22 
-    'Steak Tartare': 28 
-    'Sliced Raw Yellowfin Tuna': 15
-    'Mushroom Risotto': 18
-    'Cheesecake': 6
+    'Boont Amber Ale': '5.50'
+    'Long Cooked Pork Shoulder': '25.00'
+    'Rack of Lamb': '22.25'
+    'Steak Tartare': '28.00'
+    'Sliced Raw Yellowfin Tuna': '15.50'
+    'Mushroom Risotto': '18.00'
+    'Cheesecake': '6.00'
 
 exports.run = () ->
 async.waterfall [
