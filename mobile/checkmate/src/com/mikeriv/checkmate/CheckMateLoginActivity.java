@@ -43,7 +43,7 @@ public class CheckMateLoginActivity extends Activity {
 	 * TODO: remove after connecting to a real authentication system.
 	 */
 	private static final String[] DUMMY_CREDENTIALS = new String[] {
-			"test@test.com:1", "food@food.com:food" };
+			"test@test.com:1234", "food@food.com:food" };
 
 	/**
 	 * The default email to populate the email field with.
