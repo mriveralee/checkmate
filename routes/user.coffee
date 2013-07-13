@@ -28,10 +28,10 @@ exports.login_post = (req, res) ->
       req.session.User_id = result._id
       console.log 'logged in!'
       console.log req.session.User_id
-      res.redirect '/'
+      res.send result
     else
       console.log 'incorrect password'
-      res.redirect 'login'
+      res.send {err: "incorrect password"}
 
 exports.login_get = (req, res) ->
   console.log 'reached here'
