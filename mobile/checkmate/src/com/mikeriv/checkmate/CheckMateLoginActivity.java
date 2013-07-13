@@ -241,6 +241,7 @@ public class CheckMateLoginActivity extends Activity {
          // wait
           responseCode = connection.getResponseCode();
           response = connection.getResponseMessage();
+
         }
 
       } catch (Exception exception) {
