@@ -14,9 +14,14 @@ exports.json_all = (req, res) ->
 exports.register_post = (req, res) ->
   # res.render "hi"
   console.log req.body
-  new User(req.body).save (err) ->
-    if err then console.log 'ERROR'
-    else console.log 'yeaaah'
+  new User(req.body).save (err, user) ->
+    if err
+      console.log 'ERROR in register'
+      res.render "register"
+    else
+      console.log 'user created succesfully'
+      console.log user
+      return res.redirect "/"
 
 exports.register_get = (req, res) ->
   res.render "register"
@@ -34,15 +39,12 @@ exports.login_post = (req, res) ->
       res.send {err: "incorrect password"}
 
 exports.login_get = (req, res) ->
-  console.log 'reached here'
-  res.render "login"
-
-exports.get_menu = (req, res) =>
-  # TODO: correct conditioning on email
-  User.findOne req.params.email, (err, restaurant) ->
-    res.send restaurant.menu
+  return res.render "login" if not req.session.user_id
+  res.render "index"
 
 exports.get_user = (req, res) =>
   # TODO: correct conditioning on email
-  User.findOne req.params.email, (err, restaurant) ->
-    res.send restaurant
+  id = req.session.user_id
+  return res.send {err: "You must login first"} unless id?
+  User.findOneById id, (err, user) ->
+    return res.send user.menu
