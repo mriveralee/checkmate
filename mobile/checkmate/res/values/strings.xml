@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CheckMate</string>
+
+
+    <string name="restaurant_menu_key">RESTAURANT_MENU</string>
+    <string name="restaurant_venmo_user_id_key">RESTAURANT_VENMO_USER_ID</string>
+    <string name="restaurant_name_key">RESTAURANT_NAME</string>
+    <string name="restaurant_email_key">RESTAURANT_EMAIL</string>
+    <string name="restaurant_phone_key">RESTAURANT_PHONE</string>
+
+
+
 </resources>

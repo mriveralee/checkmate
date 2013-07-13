@@ -4,10 +4,13 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Base64;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
@@ -15,17 +18,32 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 /**
  * Activity which displays a login screen to the user, offering registration as
  * well.
  */
 public class CheckMateLoginActivity extends Activity {
-	/**
+
+	public static final String RESTAURANT_VENMO_USER_ID_KEY = "RESTAURANT_VENMO_USER_ID";
+    public static final String RESTAURANT_NAME_KEY = "RESTAURANT_NAME";
+    public static final String RESTAURANT_MENU_KEY = "RESTAURANT_MENU";
+    public static final String RESTAURANT_EMAIL_KEY = "RESTAURANT_EMAIL";
+    public static final String RESAURANT_PHONE_KEY = "RESTAURANT_PHONE";
+    private static final String APP_AUTHENTICATION_URL = "localhost:3000/auth";
+
+    private static final String TAG = CheckMateLoginActivity.class.getName();
+
+    public static String RESTAURANT_APP_USER_ID;
+
+    /**
 	 * A dummy authentication store containing known user names and passwords.
 	 * TODO: remove after connecting to a real authentication system.
 	 */
 	private static final String[] DUMMY_CREDENTIALS = new String[] {
-			"foo@example.com:hello", "bar@example.com:world" };
+			"test@test.com:1", "food@food.com:food" };
 
 	/**
 	 * The default email to populate the email field with.
@@ -197,27 +215,38 @@ public class CheckMateLoginActivity extends Activity {
 	 * the user.
 	 */
 	public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
-		@Override
+		private String mResult;
+
+        @Override
 		protected Boolean doInBackground(Void... params) {
 			// TODO: attempt authentication against a network service.
+            if (mEmail == null || mPassword == null) {
+                return false;
+            }
 
-			try {
-				// Simulate network access.
-				Thread.sleep(2000);
-			} catch (InterruptedException e) {
-				return false;
-			}
+            try {
+                HttpURLConnection connection = (HttpURLConnection) new URL(APP_AUTHENTICATION_URL).openConnection();
+                String userPasswordCombination = mEmail+":"+mPassword;
+                String basicAuth =
+                        "Basic " + new String(Base64.encode(userPasswordCombination.getBytes(), Base64.NO_WRAP));
+                connection.setRequestProperty ("Authorization", basicAuth);
+                connection.setUseCaches(false);
+                connection.connect();
+            } catch (Exception exception) {
+                Log.e(TAG, exception.toString());
+            }
+
 
 			for (String credential : DUMMY_CREDENTIALS) {
 				String[] pieces = credential.split(":");
 				if (pieces[0].equals(mEmail)) {
 					// Account exists, return true if the password matches.
-					return pieces[1].equals(mPassword);
+                    return pieces[1].equals(mPassword);
 				}
 			}
 
 			// TODO: register the new account here.
-			return true;
+			return false;
 		}
 
 		@Override
@@ -226,6 +255,14 @@ public class CheckMateLoginActivity extends Activity {
 			showProgress(false);
 
 			if (success) {
+                //Start new activity and pass the venmo user name
+                Intent mainIntent = new Intent(CheckMateLoginActivity.this, CheckMateMainActivity.class);
+                mainIntent.putExtra(RESTAURANT_VENMO_USER_ID_KEY, "venmo");
+                mainIntent.putExtra(RESTAURANT_NAME_KEY, "name");
+                mainIntent.putExtra(RESTAURANT_EMAIL_KEY, "email");
+                mainIntent.putExtra(RESTAURANT_MENU_KEY, "menu");
+                mainIntent.putExtra(RESAURANT_PHONE_KEY, "phone");
+                CheckMateLoginActivity.this.startActivity(mainIntent);
 				finish();
 			} else {
 				mPasswordView
