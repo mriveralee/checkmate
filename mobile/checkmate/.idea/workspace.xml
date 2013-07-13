@@ -39,15 +39,16 @@
     <ignored path="checkmate.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/strings.xml" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373702626920" ignored="false" />
-    <file path="/CheckMateLoginActivity.java" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373706116765" ignored="false" />
+    <file path="/CheckMateLoginActivity.java" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373712040800" ignored="false" />
     <file path="$USER_HOME$/android-sdks/tools/templates/activities/LoginActivity/root/res/layout/activity_login.xml.ftl" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373697547354" ignored="false" />
     <file path="/activity_login.xml" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373699472814" ignored="false" />
     <file path="/Dummy.txt" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373698179484" ignored="false" />
-    <file path="/fragment.java" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373710207314" ignored="false" />
+    <file path="/fragment.java" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373712122410" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373698521750" ignored="false" />
     <file path="/MenuListView.java" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373700007693" ignored="false" />
     <file path="/CheckMateMainActivity.java" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373701521198" ignored="false" />
-    <file path="$PROJECT_DIR$/gen/com/mikeriv/checkmate/R.java" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373710401713" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/mikeriv/checkmate/R.java" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373710791350" ignored="false" />
+    <file path="/a.java" changelist="31126467-eb58-4edb-98b3-9232f2970a90" time="1373711724877" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,8 +100,8 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java" line="238" class="com.mikeriv.checkmate.CheckMateLoginActivity.UserLoginTask" package="com.mikeriv.checkmate">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java" line="235" class="com.mikeriv.checkmate.CheckMateLoginActivity.UserLoginTask" package="com.mikeriv.checkmate">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -115,7 +116,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java" line="234" class="com.mikeriv.checkmate.CheckMateLoginActivity.UserLoginTask" package="com.mikeriv.checkmate">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java" line="230" class="com.mikeriv.checkmate.CheckMateLoginActivity.UserLoginTask" package="com.mikeriv.checkmate">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -130,7 +131,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java" line="229" class="com.mikeriv.checkmate.CheckMateLoginActivity.UserLoginTask" package="com.mikeriv.checkmate">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java" line="246" class="com.mikeriv.checkmate.CheckMateLoginActivity.UserLoginTask" package="com.mikeriv.checkmate">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -145,7 +146,22 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java" line="222" class="com.mikeriv.checkmate.CheckMateLoginActivity.UserLoginTask" package="com.mikeriv.checkmate">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java" line="252" class="com.mikeriv.checkmate.CheckMateLoginActivity.UserLoginTask" package="com.mikeriv.checkmate">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java" line="242" class="com.mikeriv.checkmate.CheckMateLoginActivity.UserLoginTask" package="com.mikeriv.checkmate">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -193,9 +209,13 @@
           <file leaf-file-name="CheckMateLoginActivity.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="243" column="18" selection-start="9290" selection-end="9290" vertical-scroll-proportion="0.6933333">
+                <state line="251" column="0" selection-start="8521" selection-end="8521" vertical-scroll-proportion="0.73138297">
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#2727#3138#0" expanded="true" />
+                    <element signature="e#3123#3124#0" expanded="true" />
+                    <element signature="e#3403#3564#0" expanded="true" />
+                    <element signature="e#3549#3550#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -256,7 +276,7 @@
           <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="56" selection-start="432" selection-end="432" vertical-scroll-proportion="0.375">
+                <state line="9" column="56" selection-start="432" selection-end="432" vertical-scroll-proportion="0.3739612">
                   <folding />
                 </state>
               </provider>
@@ -301,9 +321,47 @@
             <id>Android Lint</id>
           </State>
           <State>
+            <id>Code style issues</id>
+          </State>
+          <State>
             <id>Error handling</id>
           </State>
+          <State>
+            <id>JUnit issues</id>
+          </State>
+          <State>
+            <id>Javadoc issues</id>
+          </State>
+          <State>
+            <id>Logging issues</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>Resource management issues</id>
+          </State>
+          <State>
+            <id>Serialization issues</id>
+          </State>
+          <State>
+            <id>Threading issues</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -334,7 +392,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -463,24 +520,28 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5556" />
+    <property name="DEBUGGABLE_DEVICE" value="emulator-5556 (GNexus)" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="DEBUGGABLE_PROCESS" value="com.mikeriv.checkmate" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -525,19 +586,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -563,6 +611,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -669,13 +730,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="25" width="1435" height="830" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39859155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -685,7 +746,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06335493" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06335493" sideWeight="0.6014084" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969433" sideWeight="0.67042255" order="4" side_tool="false" content_ui="tabs" />
@@ -760,23 +821,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="50" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="23" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/views/MenuListView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="0" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
@@ -855,14 +899,12 @@
     </entry>
     <entry file="file://$USER_HOME$/android-sdks/sources/android-17/java/net/HttpURLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="258" column="22" selection-start="12576" selection-end="12576" vertical-scroll-proportion="-7.7025795">
-          <folding />
-        </state>
+        <state line="258" column="22" selection-start="12576" selection-end="12576" vertical-scroll-proportion="-7.7025795" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="56" selection-start="432" selection-end="432" vertical-scroll-proportion="0.375">
+        <state line="9" column="56" selection-start="432" selection-end="432" vertical-scroll-proportion="0.3739612">
           <folding />
         </state>
       </provider>
@@ -874,11 +916,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/android-sdks/sources/android-17/android/os/AsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="0" selection-start="10756" selection-end="10756" vertical-scroll-proportion="-16.473404">
+          <folding>
+            <element signature="e#10550#10787#0" expanded="true" />
+            <element signature="e#10772#10773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdks/sources/android-17/java/net/URLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="386" column="19" selection-start="13593" selection-end="13593" vertical-scroll-proportion="1.0505319">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mikeriv/checkmate/CheckMateLoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="18" selection-start="9290" selection-end="9290" vertical-scroll-proportion="0.6933333">
+        <state line="251" column="0" selection-start="8521" selection-end="8521" vertical-scroll-proportion="0.73138297">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2727#3138#0" expanded="true" />
+            <element signature="e#3123#3124#0" expanded="true" />
+            <element signature="e#3403#3564#0" expanded="true" />
+            <element signature="e#3549#3550#0" expanded="true" />
           </folding>
         </state>
       </provider>
