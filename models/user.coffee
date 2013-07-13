@@ -1,7 +1,19 @@
 mongoose = require 'mongoose'
+Schema = mongoose.Schema
 crypto = require 'crypto'
 
-User = new mongoose.Schema { email: {type: String, index: {unique: true}}, hashed_password: String, salt: String }
+User = new Schema
+  email:
+    type: String
+    index: {unique: true}
+  hashed_password: String
+  salt: String
+  address_1: String
+  address_2: String
+  city: String
+  state: String
+  phone: String
+  menu: Schema.Types.Mixed
 
 User.methods.makeSalt = ->
   return Math.round(new Date().valueOf() * Math.random() + '')

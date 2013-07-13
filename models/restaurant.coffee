@@ -8,5 +8,6 @@ Restaurant = new Schema
   state: String
   phone: String
   menu: Schema.Types.Mixed
+  email: 
 
 module.exports = mongoose.model 'Restaurant', Restaurant

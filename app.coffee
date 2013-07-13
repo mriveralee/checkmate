@@ -2,7 +2,6 @@
 express = require("express")
 home = require("#{__dirname}/routes/index")
 user = require("#{__dirname}/routes/user")
-restaurant = require("#{__dirname}/routes/restaurant")
 filldata = require "./filldata"
 http = require("http")
 path = require("path")
@@ -64,7 +63,8 @@ app.get "/register", user.register_get
 app.post "/register", user.register_post
 app.get "/login", user.login_get
 app.post "/login", user.login_post
-app.get "/menu", restaurant.get_menu
+app.get "/menu", user.get_menu
+app.get "/restaurant", user.get_menu
 
 filldata.run()
 

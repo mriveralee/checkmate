@@ -1,7 +1,7 @@
 util = require 'util'
-Restaurant = require "./models/restaurant"
+User = require "./models/user"
 
-default_restaurant =
+default_user =
   address_1: '120 2nd Street' 
   city: 'Mountain View' 
   state: 'CA'
@@ -16,7 +16,7 @@ default_restaurant =
     'Cheesecake': 6
 
 exports.run = () ->
-  Restaurant.create default_restaurant, (err, restaurant) ->
+  User.create default_user, (err, user) ->
     console.log err if err?
     console.log 'Filled fake data'
-    console.log util.inspect restaurant
+    console.log util.inspect user
