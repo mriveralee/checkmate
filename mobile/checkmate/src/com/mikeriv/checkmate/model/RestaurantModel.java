@@ -8,13 +8,6 @@ import com.mikeriv.checkmate.util.RestaurantKeys;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created with IntelliJ IDEA.
- * User: mikeriv
- * Date: 7/13/13
- * Time: 8:17 AM
- * To change this template use File | Settings | File Templates.
- */
 public class RestaurantModel implements Parcelable {
 
   private String mName;
@@ -64,7 +57,7 @@ public class RestaurantModel implements Parcelable {
     mCity = in.readString();
     mState =in.readString();
     mZipCode = in.readString();
-    mMenu = in.readParcelable(ClassLoader.getSystemClassLoader());
+    mMenu = in.readParcelable(RestaurantMenu.class.getClassLoader());
   }
 
   public String getName() {
@@ -73,6 +66,10 @@ public class RestaurantModel implements Parcelable {
 
   public String getPhoneNumber() {
     return mPhoneNumber;
+  }
+
+  public String getAddress() {
+    return mAddress;
   }
 
   public String getCity() {
@@ -94,6 +91,10 @@ public class RestaurantModel implements Parcelable {
 
   public String getmVenmoId() {
     return mVenmoId;
+  }
+
+  public RestaurantMenu getMenu() {
+    return mMenu;
   }
 
   @Override

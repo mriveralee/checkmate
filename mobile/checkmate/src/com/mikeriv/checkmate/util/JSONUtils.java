@@ -10,13 +10,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: mikeriv
- * Date: 7/13/13
- * Time: 4:40 AM
- * To change this template use File | Settings | File Templates.
- */
 public class JSONUtils {
 
   public static String convertStreamToString(InputStream is) {

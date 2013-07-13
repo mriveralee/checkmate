@@ -17,6 +17,7 @@ public class RestaurantKeys {
   public static final String STATE = "state";
   public static final String ZIP = "zip_code";
   public static final String PHONE = "phone";
+  public static final String RESTAURANT = "restaurant";
 
 
 }

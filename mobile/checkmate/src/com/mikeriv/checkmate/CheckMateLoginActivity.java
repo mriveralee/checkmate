@@ -27,7 +27,6 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.InputStream;
@@ -81,7 +80,7 @@ public class CheckMateLoginActivity extends Activity {
     super.onCreate(savedInstanceState);
 
     setContentView(R.layout.activity_login);
-    System.out.println("Blah");
+    //System.out.println("Blah");
 
     // Set up the login form.
     mEmail = getIntent().getStringExtra(EXTRA_EMAIL);
@@ -258,30 +257,16 @@ public class CheckMateLoginActivity extends Activity {
           mJSONResults = json;
           // A Simple JSONObject Parsing
           JSONArray nameArray = json.names();
-          JSONArray valArray = json.toJSONArray(nameArray);
-
           if (nameArray.get(0) == "err" || nameArray.length() < 4) {
             return false;
           }
           // Closing the input stream will trigger connection release
           instream.close();
-
           return true;
         }
-
-
       } catch (Exception e1) {
         e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
       }
-
-//      for (String credential : DUMMY_CREDENTIALS) {
-//        String[] pieces = credential.split(":");
-//        if (pieces[0].equals(mEmail)) {
-//          // Account exists, return true if the password matches.
-//          return pieces[1].equals(mPassword);
-//        }
-//      }
-
       // TODO: register the new account here.
       return false;
     }
@@ -295,56 +280,13 @@ public class CheckMateLoginActivity extends Activity {
         JSONArray keys = mJSONResults.names();
         JSONArray values = null;
         mRestaurant = new RestaurantModel(mJSONResults, getResources());
-        try {
-          values = mJSONResults.toJSONArray(keys);
-        } catch (JSONException e) {
-          e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        if (values == null) {
-          return;
-        }
-        String email = "",
-                venmo = "",
-                name = "",
-                address = "",
-                zip = "",
-                phone = "",
-                city = "",
-                state = "";
-        JSONObject menu = new JSONObject();
-        try {
-          email = mJSONResults.getString(RestaurantKeys.EMAIL);
-          menu = mJSONResults.getJSONObject(RestaurantKeys.MENU);
-          venmo =  mJSONResults.getString(RestaurantKeys.VENMO_USER_ID);
-          name =  mJSONResults.getString(RestaurantKeys.NAME);
-          phone =  mJSONResults.getString(RestaurantKeys.PHONE);
-          address =  mJSONResults.getString(RestaurantKeys.ADDRESS);
-          city =  mJSONResults.getString(RestaurantKeys.CITY);
-          state =  mJSONResults.getString(RestaurantKeys.STATE);
-          zip =  mJSONResults.getString(RestaurantKeys.ZIP);
-        } catch (JSONException e) {
+        Intent saved = new Intent(CheckMateLoginActivity.this, CheckMateMainActivity.class);
+        saved.putExtra(RestaurantKeys.RESTAURANT, mRestaurant);
+        startActivity(saved);
+        finish();
 
-          e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-
-
-
-        //Start new activity and pass the venmo user name
-        Intent mainIntent = new Intent(CheckMateLoginActivity.this, CheckMateMainActivity.class);
-        mainIntent.putExtra(RestaurantKeys.VENMO_USER_ID, venmo);
-        mainIntent.putExtra(RestaurantKeys.NAME, name);
-        mainIntent.putExtra(RestaurantKeys.EMAIL, email);
-        mainIntent.putExtra(RestaurantKeys.MENU, menu.toString());
-        mainIntent.putExtra(RestaurantKeys.PHONE, phone);
-        mainIntent.putExtra(RestaurantKeys.ADDRESS, address);
-        mainIntent.putExtra(RestaurantKeys.CITY, city);
-        mainIntent.putExtra(RestaurantKeys.STATE, state);
-        mainIntent.putExtra(RestaurantKeys.ZIP, zip);
-        startActivity(mainIntent);
-        //finish();
       } else {
-        mPasswordView
-                .setError(getString(R.string.error_incorrect_password));
+        mPasswordView.setError(getString(R.string.error_incorrect_password));
         mPasswordView.requestFocus();
       }
     }
