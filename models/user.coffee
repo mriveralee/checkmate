@@ -3,13 +3,14 @@ Schema = mongoose.Schema
 crypto = require 'crypto'
 
 User = new Schema
+  name: String
   email:
     type: String
     index: {unique: true}
   venmo_id: String
   hashed_password: String
   salt: String
-  address_1: String
+  address: String
   city: String
   state: String
   zip_code: String

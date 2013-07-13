@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.mikeriv.checkmate.model.RestaurantModel;
 import com.mikeriv.checkmate.util.JSONUtils;
 import com.mikeriv.checkmate.util.RestaurantKeys;
 import org.apache.http.HttpEntity;
@@ -39,7 +40,6 @@ import java.util.List;
  */
 public class CheckMateLoginActivity extends Activity {
   private static final String APP_AUTHENTICATION_URL = "http://10.0.2.2:3000/login";
-
   private static final String TAG = CheckMateLoginActivity.class.getName();
 
   public static String RESTAURANT_APP_USER_ID;
@@ -67,6 +67,7 @@ public class CheckMateLoginActivity extends Activity {
 
   //JSON Results
   private JSONObject mJSONResults;
+  private RestaurantModel mRestaurant;
 
   // UI references.
   private EditText mEmailView;
@@ -293,6 +294,7 @@ public class CheckMateLoginActivity extends Activity {
       if (success) {
         JSONArray keys = mJSONResults.names();
         JSONArray values = null;
+        mRestaurant = new RestaurantModel(mJSONResults, getResources());
         try {
           values = mJSONResults.toJSONArray(keys);
         } catch (JSONException e) {
@@ -301,8 +303,6 @@ public class CheckMateLoginActivity extends Activity {
         if (values == null) {
           return;
         }
-
-
         String email = "",
                 venmo = "",
                 name = "",
@@ -323,6 +323,7 @@ public class CheckMateLoginActivity extends Activity {
           state =  mJSONResults.getString(RestaurantKeys.STATE);
           zip =  mJSONResults.getString(RestaurantKeys.ZIP);
         } catch (JSONException e) {
+
           e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 
@@ -339,8 +340,8 @@ public class CheckMateLoginActivity extends Activity {
         mainIntent.putExtra(RestaurantKeys.CITY, city);
         mainIntent.putExtra(RestaurantKeys.STATE, state);
         mainIntent.putExtra(RestaurantKeys.ZIP, zip);
-        CheckMateLoginActivity.this.startActivity(mainIntent);
-        finish();
+        startActivity(mainIntent);
+        //finish();
       } else {
         mPasswordView
                 .setError(getString(R.string.error_incorrect_password));

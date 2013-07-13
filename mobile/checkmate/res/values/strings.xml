@@ -9,6 +9,16 @@
     <string name="restaurant_email_key">RESTAURANT_EMAIL</string>
     <string name="restaurant_phone_key">RESTAURANT_PHONE</string>
 
+    <!-- CONSTANTS -->
+    <string name="default_restaurant_name">No Restaurant Name</string>
+    <string name="default_email">No Email</string>
+    <string name="default_address">No Address</string>
+    <string name="default_city"></string>
+    <string name="default_state"></string>
+    <string name="default_zip_code"></string>
+    <string name="default_phone">No Phone #</string>
+    <string name="default_venmo">Venmo Unlinked</string>
+    <string name="default_menu">No Menu Available</string>
 
 
 </resources>
